@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="{{site.locale}}">
+{{> html-head }}
+
+<body>
+    {{> header }}
+
+    <div id="main">
+        <div class="container">
+            <article>
+                <h1>Previous Releases</h1>
+
+                <section>
+                    <h2>io.js &amp; Node.js</h2>
+                    <p>
+                        {{iojs.intro}}
+                    </p>
+                </section>
+
+                <section>
+                    <table class="download-table full-width" cellspacing="0" border="0" cellpadding="0">
+                        <thead>
+                            <tr>
+                                <td>Version</td>
+                                <td>Date</td>
+                                <td>V8</td>
+                                <td>npm</td>
+                                <td>Modules</td>
+                                <td></td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {{#project.versions}}
+                                <tr>
+                                    <td data-label="Version">{{name}} {{version}}</td>
+                                    <td data-label="Date"><time>{{date}}</time></td>
+                                    <td data-label="V8">{{v8}}</td>
+                                    <td data-label="npm">{{npm}}</td>
+                                    <td data-label="Modules">{{modules}}</td>
+                                    <td class="download-table-last">
+                                        <a href="{{url}}">
+                                            {{i18n 'releases.downloads'}}
+                                        </a>
+                                        <a href="{{changeloglink version}}">
+                                            {{i18n 'links.pages.changelog'}}
+                                        </a>
+                                        <a href="{{apidocslink version}}">
+                                            {{i18n 'docs.text'}}
+                                        </a>
+                                    </td>
+                                </tr>
+                            {{/project.versions}}
+                        </tbody>
+                    </table>
+                    <p id="modules-description">{{{modules}}}</p>
+                </section>
+            </article>
+
+        </div>
+    </div>
+
+    {{> footer }}
+</body>
+</html>

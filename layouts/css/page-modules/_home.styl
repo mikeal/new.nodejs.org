@@ -1,0 +1,46 @@
+.home-version
+    padding-top 10px
+    font-size 16px
+    color $darkgray
+
+.home-version-banner
+    color $node-gray
+    font-size 130%
+    background-color $lightgreen
+    padding 5px 15px
+    border-radius 2px
+    margin-top 1em
+
+.home-secondary-links
+    a
+        $home-secondary-links-color = saturation($node-green, 20%)
+        font-size 1rem
+        color $home-secondary-links-color
+
+        &:hover
+            background-color transparent
+            border-bottom 1px solid $home-secondary-links-color
+
+#home-intro
+    max-width: $body-max-width * 0.75
+    margin 0 auto
+    padding-top 30px
+    text-align center
+
+#home-downloadbutton
+    display inline-block
+    margin 10px 4px
+    padding 0.2em 0.6em
+
+    background-color $node-green
+    color #fff
+    border-radius 2px
+    font-size 30px
+    font-weight 400
+
+    transition .2s background-color ease-in-out
+
+    &:hover
+        background-color saturation($node-green, 80%)
+
+

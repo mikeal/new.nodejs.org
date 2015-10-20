@@ -1,0 +1,146 @@
+.download-hero
+    display table
+    margin-bottom 1em
+
+    ul
+        text-align center
+        margin 0 auto
+        display table-row
+
+        li
+            width 33%
+            display table-cell
+
+            a
+                display block
+                width 100%
+                padding-top 1em
+                background $lightgreen
+
+                img
+                    display block
+                    margin 0 auto
+
+            a:hover, a:active
+                background $darkgray
+                color $node-green
+
+.download-matrix
+    margin-bottom 1.5rem
+
+    th
+        text-align left
+        width 33%
+
+    td
+        border 1px solid $border-color
+
+        a,
+        span
+            background none
+            display block
+            height 100%
+            width 100%
+            text-align center
+
+        a:hover, a:active
+            background $darkgray
+            color $node-green
+
+h5.download-table-previous-releases-header
+    margin-bottom 5px
+
+.download-table
+    font-size small
+    border 1px solid $border-color
+
+    td
+        padding 5px
+
+    > thead
+        font-weight 600
+
+    > tbody
+        td
+            border-top 1px solid $border-color
+
+        tr:nth-child(odd)
+            background-color #eee
+
+        tr:nth-child(even)
+            background-color #fff
+
+td.download-table-last
+    text-align right
+
+    > a
+        padding 0 10px
+
+#modules-description
+    font-size: small
+
+@media (max-width: 700px)
+    .download-hero ul
+        width auto
+        display block
+
+        li
+            display block
+            width 100%
+            margin-bottom 1em
+
+    .download-matrix
+        display block
+
+        th
+            display block
+            width 100%
+
+        tr
+            display block
+            margin-bottom 1em
+
+        td
+            display block
+            border 0
+
+            a
+                text-align left
+
+
+    .download-table
+        border 0
+
+        > thead
+            display none
+
+        tr
+            margin-bottom 10px
+            display block
+
+        td
+            display block
+            text-align right
+
+        td:last-child
+            border-bottom 0
+
+        td:before
+            content attr(data-label)
+            float left
+            font-weight 600
+
+        > thead > tr > th,
+        > tbody > tr > th,
+        > tfoot > tr > th,
+        > thead > tr > td,
+        > tbody > tr > td,
+        > tfoot > tr > td,
+        > tbody td
+            border none
+
+    .download-table > tbody td
+        border none
+
+    td.download-table-last
+        text-align center
